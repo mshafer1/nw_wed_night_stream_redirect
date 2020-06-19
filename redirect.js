@@ -46,4 +46,19 @@ function get_stream_link(d) {
 var d = new Date(); // get the current date
 var stream_link = get_stream_link(d);
 
-window.setTimeout(function() {window.location.href=stream_link;}, 4000);
+try {
+	window.setTimeout(function () { window.location.href = stream_link; }, 4000);
+} catch (error) {
+	// window must be undefined, just pass
+}
+
+
+try {
+	// from https://stackoverflow.com/a/11279639
+	// if module is availble, we must be getting included via a 'require', export methods
+	var exports = module.exports = {};
+
+	exports.get_stream_link = get_stream_link;
+} catch (error) {
+	// pass
+}
