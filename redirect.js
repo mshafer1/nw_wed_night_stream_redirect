@@ -35,6 +35,7 @@ page_data[new Date(2020, 10, 18)] = 'https://youtu.be/hPnxXC_Atw4';
 page_data[new Date(2020, 10, 25)] = 'https://youtu.be/pbsmn4mcOPk';
 page_data[new Date(2020, 11, 2)] = 'https://youtu.be/pdyJAHMpsiE';
 
+
 function get_stream_link(d) {
 	// js uses 0 indexed months, 5 = June, 6 = July, 7 = August, 8 = September
 	var result = '#';
@@ -55,18 +56,30 @@ function get_stream_link(d) {
 	return result;
 }
 
-var table = document.getElementById('link_table');
+try {
+	var table = document.getElementById('link_table');
 
-for (key in page_data) {
-	var row = table.insertRow();
+	for (key in page_data) {
+		var then = new Date(key).getTime();
+		var now = new Date().getTime();
+		var thirtyDaysInMilliseconds = 2592000000;
+		if (now - then > thirtyDaysInMilliseconds) { continue; }
 
-	var cell = row.insertCell();
-	var text = document.createTextNode(new Date(key).toLocaleDateString())
-	cell.appendChild(text)
+		var row = table.insertRow();
 
-	var cell = row.insertCell();
-	var text = document.createTextNode(page_data[key])
-	cell.appendChild(text)
+		var cell = row.insertCell();
+		var text = document.createTextNode(new Date(key).toLocaleDateString())
+		cell.appendChild(text)
+
+		var cell = row.insertCell();
+		var link = document.createElement("a")
+		link.href = page_data[key]
+		link.text = page_data[key]
+		cell.appendChild(link)
+	}
+} catch (error) {
+	// table doesn't exist??
+	console.error(error)
 }
 
 try {
@@ -84,7 +97,7 @@ try {
 console.log(`Redirect link version: ${version}`)
 
 try {
-	window.setTimeout(function () { window.location.href = stream_link; }, 4000);
+	// window.setTimeout(function () { window.location.href = stream_link; }, 4000);
 } catch (error) {
 	// window must not be defined, just pass
 }
