@@ -52,6 +52,7 @@ try {
 	// window must be undefined, just pass
 }
 
+console.log("Redirect link version: 1.0.0")
 
 try {
 	// from https://stackoverflow.com/a/11279639
