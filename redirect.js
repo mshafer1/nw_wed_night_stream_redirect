@@ -1,5 +1,5 @@
 var expiration_date = new Date(2020, 11, 9)  // the date that the urls here end
-var version = "1.0.3"
+var version = "1.0.4"
 var d = new Date(); // get the current date
 
 page_data = {
@@ -97,7 +97,7 @@ try {
 console.log(`Redirect link version: ${version}`)
 
 try {
-	// window.setTimeout(function () { window.location.href = stream_link; }, 4000);
+	window.setTimeout(function () { window.location.href = stream_link; }, 4000);
 } catch (error) {
 	// window must not be defined, just pass
 }
