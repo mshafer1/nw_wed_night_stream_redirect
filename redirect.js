@@ -1,3 +1,7 @@
+var expiration_date = new Date(2020, 8, 9)  // the date that the urls here end
+var version = "1.0.1"
+var d = new Date(); // get the current date
+
 function get_stream_link(d) {
 	// js uses 0 indexed months, 5 = June, 6 = July, 7 = August, 8 = September
 	var result = 'https://youtu.be/pIFV0Bhxd_Q';
@@ -39,20 +43,34 @@ function get_stream_link(d) {
 		result = 'https://youtu.be/Kbs9_TZH5DE';
 	}
 
+	if (+d >= +(expiration_date)) {
+		throw Error("This page is out of date, do not redirect")
+	}
+
 	return result;
 }
 
 
-var d = new Date(); // get the current date
-var stream_link = get_stream_link(d);
+try {
+	var stream_link = get_stream_link(d);
+} catch (error) {
+	// out of date, prompt? reload?
+	var reload = confirm(`This page is out of date (expired on ${expiration_date.toLocaleDateString()}). Would you like to refresh to get the latest version?`);
+	console.log("Reload: ", reload)
+	if (reload) {
+		window.location.reload(true); // perform a hard reload to empty cache
+	}
+}
+
+
+console.log(`Redirect link version: ${version}`)
 
 try {
 	window.setTimeout(function () { window.location.href = stream_link; }, 4000);
 } catch (error) {
-	// window must be undefined, just pass
+	// window must not be defined, just pass
 }
 
-console.log("Redirect link version: 1.0.0")
 
 try {
 	// from https://stackoverflow.com/a/11279639
@@ -60,6 +78,7 @@ try {
 	var exports = module.exports = {};
 
 	exports.get_stream_link = get_stream_link;
+	exports.expiration_date = expiration_date;
 } catch (error) {
 	// pass
 }

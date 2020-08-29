@@ -27,4 +27,11 @@ describe('test add method', () => {
     var d = new Date(2020, month, day)
     expect(nw_helper.get_stream_link(d)).toEqual(expected);
   });
+
+  it('throws for dates on or after the expiration date', () => {
+    var d = nw_helper.expiration_date;
+    expect(() => {
+      nw_helper.get_stream_link(d);
+    }).toThrow()
+  })
 });
