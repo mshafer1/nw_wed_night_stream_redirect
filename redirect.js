@@ -55,6 +55,19 @@ function get_stream_link(d) {
 	return result;
 }
 
+var table = document.getElementById('link_table');
+
+for (key in page_data) {
+	var row = table.insertRow();
+
+	var cell = row.insertCell();
+	var text = document.createTextNode(key.toLocaleDateString())
+	cell.appendChild(text)
+
+	var cell = row.insertCell();
+	var text = document.createTextNode(page_data[key])
+	cell.appendChild(text)
+}
 
 try {
 	var stream_link = get_stream_link(d);
