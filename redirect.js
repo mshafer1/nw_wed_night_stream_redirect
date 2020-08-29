@@ -5,6 +5,8 @@ var d = new Date(); // get the current date
 page_data = {
 }
 
+// js uses 0 indexed months, 5 = June, 6 = July, 7 = August, 8 = September
+
 // 2020 Q2
 page_data[new Date(2020, 5, 8)] = 'https://youtu.be/pIFV0Bhxd_Q';
 page_data[new Date(2020, 5, 17)] = 'https://youtu.be/gm-r5A1_nQo';
@@ -37,13 +39,10 @@ page_data[new Date(2020, 11, 2)] = 'https://youtu.be/pdyJAHMpsiE';
 
 
 function get_stream_link(d) {
-	// js uses 0 indexed months, 5 = June, 6 = July, 7 = August, 8 = September
 	var result = '#';
 
 	for (key in page_data) {
 		var d2 = new Date(key)
-		console.log(d, d2, +d, +d2, "comparison", +d >= +d2, page_data[key])
-		// console.log(d)
 		if (+d >= +d2) {
 			result = page_data[key];
 		}
