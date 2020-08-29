@@ -96,7 +96,7 @@ try {
 console.log(`Redirect link version: ${version}`)
 
 try {
-	// window.setTimeout(function () { window.location.href = stream_link; }, 4000);
+	window.setTimeout(function () { window.location.href = stream_link; }, 4000);
 } catch (error) {
 	// window must not be defined, just pass
 }
