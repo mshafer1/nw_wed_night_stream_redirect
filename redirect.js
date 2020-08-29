@@ -1,5 +1,5 @@
-var expiration_date = new Date(2020, 8, 9)  // the date that the urls here end
-var version = "1.0.1"
+var expiration_date = new Date(2020, 11, 9)  // the date that the urls here end
+var version = "1.0.2"
 var d = new Date(); // get the current date
 
 function get_stream_link(d) {
@@ -42,6 +42,22 @@ function get_stream_link(d) {
 	if (+d >= +(new Date(2020, 8, 2))) {
 		result = 'https://youtu.be/Kbs9_TZH5DE';
 	}
+
+	// 2020 Q3
+	if (+d >= +(new Date(2020, 8, 9))) { result = 'https://youtu.be/GFT_HaI9aKw'; }
+	if (+d >= +(new Date(2020, 8, 16))) { result = 'https://youtu.be/KULZo9cCv8o'; }
+	if (+d >= +(new Date(2020, 8, 23))) { result = 'https://youtu.be/pNojl09vj-I'; }
+	if (+d >= +(new Date(2020, 8, 30))) { result = 'https://youtu.be/DL4o2DSMoxY'; }
+	if (+d >= +(new Date(2020, 9, 7))) { result = 'https://youtu.be/drug2qQUIg4'; }
+	if (+d >= +(new Date(2020, 9, 14))) { result = 'https://youtu.be/qZ2tgJdcCBI'; }
+	if (+d >= +(new Date(2020, 9, 21))) { result = 'https://youtu.be/MsHvSYWRsfA'; }
+	if (+d >= +(new Date(2020, 9, 28))) { result = 'https://youtu.be/ttwyaoJDI-0'; }
+	if (+d >= +(new Date(2020, 10, 4))) { result = 'https://youtu.be/2t4XiDteBVo'; }
+	if (+d >= +(new Date(2020, 10, 11))) { result = 'https://youtu.be/t0cxl38SAqQ'; }
+	if (+d >= +(new Date(2020, 10, 18))) { result = 'https://youtu.be/hPnxXC_Atw4'; }
+	if (+d >= +(new Date(2020, 10, 25))) { result = 'https://youtu.be/pbsmn4mcOPk'; }
+	if (+d >= +(new Date(2020, 11, 2))) { result = 'https://youtu.be/pdyJAHMpsiE'; }
+
 
 	if (+d >= +(expiration_date)) {
 		throw Error("This page is out of date, do not redirect")
