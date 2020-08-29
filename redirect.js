@@ -61,7 +61,7 @@ for (key in page_data) {
 	var row = table.insertRow();
 
 	var cell = row.insertCell();
-	var text = document.createTextNode(key.toLocaleDateString())
+	var text = document.createTextNode(new Date(key).toLocaleDateString())
 	cell.appendChild(text)
 
 	var cell = row.insertCell();
