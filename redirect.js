@@ -37,6 +37,21 @@ page_data[new Date(2020, 10, 18)] = 'https://youtu.be/hPnxXC_Atw4';
 page_data[new Date(2020, 10, 25)] = 'https://youtu.be/pbsmn4mcOPk';
 page_data[new Date(2020, 11, 2)] = 'https://youtu.be/pdyJAHMpsiE';
 
+// 2020 Q4
+page_data[new Date(2020, 11, 9)] = 'https://youtu.be/afRfnEHnBIY';
+page_data[new Date(2020, 11, 16)] = 'https://youtu.be/B6g1eCD8HXs';
+page_data[new Date(2020, 11, 23)] = 'https://youtu.be/u038j_IwXbc';
+page_data[new Date(2020, 11, 30)] = 'https://youtu.be/yBWuWWxa4GI';
+page_data[new Date(2021, 0, 6)] = 'https://youtu.be/QGwmtikxRhI';
+page_data[new Date(2021, 0, 13)] = 'https://youtu.be/N4r9VeSoUiU';
+page_data[new Date(2021, 0, 20)] = 'https://youtu.be/RdZl9FTV0po';
+page_data[new Date(2021, 0, 27)] = 'https://youtu.be/CGj-Gw_hbi8';
+page_data[new Date(2021, 1, 3)] = 'https://youtu.be/rv7O5iHZ_n4';
+page_data[new Date(2021, 1, 10)] = 'https://youtu.be/8nnM5oCw0Jk';
+page_data[new Date(2021, 1, 17)] = 'https://youtu.be/vctKAAJOGhA';
+page_data[new Date(2021, 1, 24)] = 'https://youtu.be/yN6OOEXr5Ug';
+page_data[new Date(2021, 2, 3)] = 'https://youtu.be/iBtTiUE9HX0';
+
 
 function get_stream_link(d) {
 	var result = '#';
