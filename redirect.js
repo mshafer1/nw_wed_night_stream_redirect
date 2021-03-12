@@ -1,4 +1,4 @@
-var expiration_date = new Date(2021, 2, 16)  // the date that the urls here end
+var expiration_date = new Date(2021, 2, 30)  // the date that the urls here end
 var version = "1.0.6"
 var d = new Date(); // get the current date
 
@@ -54,6 +54,8 @@ page_data[new Date(2021, 2, 3)] = 'https://youtu.be/iBtTiUE9HX0';
 
 // 2021 Q1
 page_data[new Date(2021, 2, 10)] = 'https://youtu.be/ZmKth32nDt0';
+page_data[new Date(2021, 2, 17)] = 'https://youtu.be/LK8hnVGddKY';
+page_data[new Date(2021, 2, 24)] = 'https://youtu.be/TYuDBublCgw';
 
 function get_stream_link(d) {
 	var result = '#';
