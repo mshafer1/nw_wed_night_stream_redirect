@@ -56,6 +56,12 @@ page_data[new Date(2021, 2, 3)] = 'https://youtu.be/iBtTiUE9HX0';
 page_data[new Date(2021, 2, 10)] = 'https://youtu.be/ZmKth32nDt0';
 page_data[new Date(2021, 2, 17)] = 'https://youtu.be/LK8hnVGddKY';
 page_data[new Date(2021, 2, 24)] = 'https://youtu.be/TYuDBublCgw';
+page_data[new Date(2021, 2, 31)] = "https://youtu.be/zFq0z1k5a18";
+page_data[new Date(2021, 3, 7)] = "https://youtu.be/Z2Y5zEN-kFw";
+page_data[new Date(2021, 3, 14)] = "https://youtu.be/B7U293FyIO0";
+page_data[new Date(2021, 3, 21)] = "https://youtu.be/NfaISb55iFs";
+page_data[new Date(2021, 3, 28)] = "https://youtu.be/2GGznnoDIjc";
+
 
 function get_stream_link(d) {
 	var result = '#';
