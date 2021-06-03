@@ -65,7 +65,7 @@ page_data[new Date(2021, 4, 05)] = "https://youtu.be/K5yGy4BOxDw"
 page_data[new Date(2021, 4, 12)] = "https://youtu.be/6eTeYKuYtQo"
 page_data[new Date(2021, 4, 19)] = "https://youtu.be/GTPdKHE_nQU"
 page_data[new Date(2021, 4, 26)] = "https://youtu.be/H9wLdbGVvm4"
-
+page_data[new Date(2021, 5, 2)] = 'https://youtu.be/nr3ie_qfEN4'
 
 // 2021 Q2
 page_data[new Date(2021, 5, 9)] = 'https://youtu.be/X5cwcZuyr5E'
