@@ -1,5 +1,5 @@
 var expiration_date = new Date(2021, 8, 7)  // the date that the urls here end
-var version = "1.0.8"
+var version = "1.0.9"
 var d = new Date(); // get the current date
 
 page_data = {
