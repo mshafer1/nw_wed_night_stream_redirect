@@ -126,8 +126,10 @@ try {
 	console.error(error)
 }
 
+var stream_link = '#'
+
 try {
-	var stream_link = get_stream_link(d);
+	stream_link = get_stream_link(d);
 } catch (error) {
 	// out of date, prompt? reload?
 	var reload = confirm(`This page is out of date (expired on ${expiration_date.toLocaleDateString()}). Would you like to refresh to get the latest version?`);
