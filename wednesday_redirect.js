@@ -1,5 +1,5 @@
-var expiration_date = new Date(2021, 4, 31)  // the date that the urls here end
-var version = "1.0.7"
+var expiration_date = new Date(2021, 8, 7)  // the date that the urls here end
+var version = "1.0.8"
 var d = new Date(); // get the current date
 
 page_data = {
@@ -65,6 +65,22 @@ page_data[new Date(2021, 4, 05)] = "https://youtu.be/K5yGy4BOxDw"
 page_data[new Date(2021, 4, 12)] = "https://youtu.be/6eTeYKuYtQo"
 page_data[new Date(2021, 4, 19)] = "https://youtu.be/GTPdKHE_nQU"
 page_data[new Date(2021, 4, 26)] = "https://youtu.be/H9wLdbGVvm4"
+
+
+// 2021 Q2
+page_data[new Date(2021, 5, 9)] = 'https://youtu.be/X5cwcZuyr5E'
+page_data[new Date(2021, 5, 16)] = 'https://youtu.be/bxlDP4pCZlY'
+page_data[new Date(2021, 5, 23)] = 'https://youtu.be/ps_FiU-sF7E'
+page_data[new Date(2021, 5, 30)] = 'https://youtu.be/nf_1tm-ZR30'
+page_data[new Date(2021, 6, 7)] = 'https://youtu.be/_oNFHDxQjFg'
+page_data[new Date(2021, 6, 14)] = 'https://youtu.be/dxj4m-3jpq8'
+page_data[new Date(2021, 6, 21)] = 'https://youtu.be/KW721i5qCqg'
+page_data[new Date(2021, 6, 28)] = 'https://youtu.be/S7K37sY3eHQ'
+page_data[new Date(2021, 7, 4)] = 'https://youtu.be/gZ9Kl8JX-Bw'
+page_data[new Date(2021, 7, 11)] = 'https://youtu.be/odh9wTAagZA'
+page_data[new Date(2021, 7, 18)] = 'https://youtu.be/c96q1oWSkfU'
+page_data[new Date(2021, 7, 25)] = 'https://youtu.be/RigQl1SKP6M'
+page_data[new Date(2021, 8, 1)] = 'https://youtu.be/zStI7S-dKKw'
 
 
 function get_stream_link(d) {
