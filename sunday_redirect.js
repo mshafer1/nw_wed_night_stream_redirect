@@ -1,5 +1,5 @@
 var expiration_date = new Date(2021, 8, 4)  // the date that the urls here end
-var version = "1.0.8"
+var version = "1.0.9"
 var d = new Date(); // get the current date
 
 page_data = {
@@ -71,7 +71,7 @@ try {
 }
 
 
-function redirection() {
+function redirection(d) {
   try {
     var stream_link = get_stream_link(d);
   } catch (error) {
@@ -93,7 +93,7 @@ function redirection() {
 }
 
 console.log(`Redirect link version: ${version}`)
-redirection()
+redirection(d)
 
 try {
 	// from https://stackoverflow.com/a/11279639
